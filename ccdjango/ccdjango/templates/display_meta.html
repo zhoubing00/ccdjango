@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}display META{% endblock %}
+
+{% block content %}
+{% for k in values %}
+<p> {{ k }}      {{ values }}.</p>
+{% endfor%}
+{% endblock %}
