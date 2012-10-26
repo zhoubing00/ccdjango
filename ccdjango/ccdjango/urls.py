@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from ccdjango.views import hello, current_datetime, hours_ahead, display_meta
+from ccdjango.books import views
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -9,6 +10,8 @@ urlpatterns = patterns('',
     (r'^time/$', current_datetime),
     (r'^time/plus/(\d{1,2})$', hours_ahead),
     (r'^display/$', display_meta),
+    #(r'^search-form/$', views.search_form),
+    (r'^search/$', views.search),
     # Examples:
     # url(r'^$', 'ccdjango.views.home', name='home'),
     # url(r'^ccdjango/', include('ccdjango.foo.urls')),
